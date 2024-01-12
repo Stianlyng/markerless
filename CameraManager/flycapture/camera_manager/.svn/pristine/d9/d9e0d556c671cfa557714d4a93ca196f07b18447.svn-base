@@ -1,0 +1,62 @@
+﻿Build started 29.01.2015 11:59:24.
+     1>Project "E:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\CameraManager.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_abstractcameramanager.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_abstractcameramanager.cpp, GeneratedFiles\Release\moc_abstractcameramanager.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_calibrationviewerwidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_calibrationviewerwidget.cpp, GeneratedFiles\Release\moc_calibrationviewerwidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_configfileviewerwidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_configfileviewerwidget.cpp, GeneratedFiles\Release\moc_configfileviewerwidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_mainwindow.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_mainwindow.cpp, GeneratedFiles\Release\moc_mainwindow.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_qvideowidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_qvideowidget.cpp, GeneratedFiles\Release\moc_qvideowidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_socketviewerwidget.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_socketviewerwidget.cpp, GeneratedFiles\Release\moc_socketviewerwidget.cpp.
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(935,5): warning MSB8027: Two or more files with the name of moc_widgetgl.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are GeneratedFiles\Debug\moc_widgetgl.cpp, GeneratedFiles\Release\moc_widgetgl.cpp.
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\CL.exe /c /IC:\Qt\5.3\msvc2013_64\include\QtANGLE /I.\GeneratedFiles /I. /IC:\Qt\5.3\msvc2013_64\include /I.\GeneratedFiles\Debug /IC:\Qt\5.3\msvc2013_64\include\QtCore /IC:\Qt\5.3\msvc2013_64\include\QtGui /IC:\Qt\5.3\msvc2013_64\include\ActiveQt /IC:\Qt\5.3\msvc2013_64\include\QtOpenGL /IC:\Qt\5.3\msvc2013_64\include\QtWidgets /IE:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\..\include /Zi /nologo /W1 /WX- /Od /D UNICODE /D WIN32 /D WIN64 /D QT_DLL /D QT_CORE_LIB /D QT_GUI_LIB /D QT_OPENGL_LIB /D QT_WIDGETS_LIB /Gm- /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc120.pdb" /Gd /TP /errorReport:prompt ..\src\abstractcamera.cpp ..\src\abstractcameramanager.cpp ..\src\cameraproperty.cpp ..\src\emptycameramanager.cpp ..\src\flycamera.cpp ..\src\flycameramanager.cpp ..\src\iscamera.cpp ..\src\iscameramanager.cpp ..\src\main.cpp ..\src\mainwindow.cpp ..\src\qvideowidget.cpp ..\src\testcamera.cpp ..\src\testcameramanager.cpp GeneratedFiles\Debug\moc_abstractcameramanager.cpp GeneratedFiles\Debug\moc_mainwindow.cpp
+         abstractcamera.cpp
+         abstractcameramanager.cpp
+         cameraproperty.cpp
+         emptycameramanager.cpp
+         flycamera.cpp
+         flycameramanager.cpp
+         iscamera.cpp
+         iscameramanager.cpp
+         main.cpp
+         mainwindow.cpp
+         qvideowidget.cpp
+         testcamera.cpp
+         testcameramanager.cpp
+         moc_abstractcameramanager.cpp
+         moc_mainwindow.cpp
+         Generating Code...
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"E:\3DMoTech\lars_camera_manager\CameraManager\x64\Debug\\CameraManager.exe" /NOLOGO /LIBPATH:E:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\..\lib /LIBPATH:C:\Qt\5.3\msvc2013_64\lib qtmaind.lib Qt5Cored.lib Qt5Guid.lib Qt5AxContainerd.lib Qt5AxBased.lib Qt5OpenGLd.lib opengl32.lib glu32.lib Qt5Widgetsd.lib FlyCapture2_v100.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\3DMoTech\lars_camera_manager\CameraManager\x64\Debug\CameraManager.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\3DMoTech\lars_camera_manager\CameraManager\x64\Debug\CameraManager.lib" /MACHINE:X64 x64\Debug\abstractcamera.obj
+         x64\Debug\abstractcameramanager.obj
+         x64\Debug\calibrationviewerwidget.obj
+         x64\Debug\cameraproperty.obj
+         x64\Debug\configfilereader.obj
+         x64\Debug\configfileviewerwidget.obj
+         x64\Debug\emptycameramanager.obj
+         x64\Debug\flycamera.obj
+         x64\Debug\flycameramanager.obj
+         x64\Debug\imageviewerwidget.obj
+         x64\Debug\iscamera.obj
+         x64\Debug\iscameramanager.obj
+         x64\Debug\main.obj
+         x64\Debug\mainwindow.obj
+         x64\Debug\menubar.obj
+         x64\Debug\qvideowidget.obj
+         x64\Debug\socketviewerwidget.obj
+         x64\Debug\testcamera.obj
+         x64\Debug\testcameramanager.obj
+         x64\Debug\widgetgl.obj
+         x64\Debug\moc_abstractcameramanager.obj
+         x64\Debug\moc_calibrationviewerwidget.obj
+         x64\Debug\moc_configfileviewerwidget.obj
+         x64\Debug\moc_mainwindow.obj
+         x64\Debug\moc_qvideowidget.obj
+         x64\Debug\moc_socketviewerwidget.obj
+         x64\Debug\moc_widgetgl.obj
+         x64\Debug\qrc_cameramanager.obj
+         CameraManager.vcxproj -> E:\3DMoTech\lars_camera_manager\CameraManager\x64\Debug\CameraManager.exe
+     1>Done Building Project "E:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\CameraManager.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:14.41

@@ -1,0 +1,9 @@
+﻿Build started 23.01.2015 17:18:26.
+     1>Project "G:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\CameraManager.vcxproj" on node 2 (Build target(s)).
+     1>Link:
+         CameraManager.vcxproj -> G:\3DMoTech\lars_camera_manager\CameraManager\x64\Release\CameraManager.exe
+     1>Done Building Project "G:\3DMoTech\lars_camera_manager\CameraManager\CameraManager\CameraManager.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.17
