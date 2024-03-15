@@ -4,6 +4,7 @@ import json
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
 
+
 def load_calibration_data(img_path):
     with np.load(f'calibration_files/{img_path}.npz') as data:
         return {
@@ -12,6 +13,7 @@ def load_calibration_data(img_path):
             'rvecs': data['rvecs'],
             'tvecs': data['tvecs']
         }
+
 
 # Load the calibration parameters for each camera:
 cam1 = load_calibration_data("venstre")
@@ -22,12 +24,14 @@ cam3 = load_calibration_data("hoyre")
 with open('markers.json') as f:
     image_markers = json.load(f)
 
+
 def normalize_points(points, K_inv):
     # Convert points to homogeneous coordinates
     points_homogeneous = np.hstack((points, np.ones((points.shape[0], 1))))
     # Normalize points
     points_normalized = np.dot(K_inv, points_homogeneous.T).T
     return points_normalized[:, :2]
+
 
 def triangulate_points(cam1, cam2, cam3, venstre, midten, hoyre):
     # Load the 2D image points for each camera:
@@ -60,13 +64,14 @@ def triangulate_points(cam1, cam2, cam3, venstre, midten, hoyre):
 
     return points_3d[:3].T
 
+
 # Triangulate the 3D coordinates:
 points_3d = triangulate_points(cam1, cam2, cam3, "venstre", "midten", "hoyre")
 
 # Plot the 3D coordinates
 fig = plt.figure()
 ax = fig.add_subplot(111, projection='3d')
-ax.scatter(points_3d[:,0], points_3d[:,1], points_3d[:,2], c='r', marker='o')
+ax.scatter(points_3d[:, 0], points_3d[:, 1], points_3d[:, 2], c='r', marker='o')
 ax.set_xlabel('X')
 ax.set_ylabel('Y')
 ax.set_zlabel('Z')

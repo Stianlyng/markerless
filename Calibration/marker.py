@@ -3,6 +3,7 @@ import os
 import numpy as np
 import json
 
+
 def process_image(image_path):
     image = cv2.imread(image_path)
 
@@ -17,7 +18,7 @@ def process_image(image_path):
         x, y, w, h = cv2.boundingRect(contour)
         center_x = x + w // 2
         center_y = y + h // 2
-        #cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
+        # cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
         cv2.circle(image, (center_x, center_y), 5, (255, 0, 0), -1)
         marker_centers.append({'x': center_x, 'y': center_y})
 
@@ -27,7 +28,8 @@ def process_image(image_path):
 
     return marker_centers
 
-folder_path = 'opptak/' 
+
+folder_path = 'opptak/'
 
 image_files = [f for f in os.listdir(folder_path) if f.endswith(('.raw', '.pgm', '.ppm'))]
 
