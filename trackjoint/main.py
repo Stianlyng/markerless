@@ -1,5 +1,6 @@
 import os
 import toml
+
 from trackjoint import fileHandler
 
 
@@ -36,22 +37,42 @@ def edit_project_parameters():
     with open("Config.toml", "r") as f:
         config = toml.load(f)
 
-    print("Current project parameters:")
-    print(toml.dumps(config["project"]))
+    while True:
+        print("Current project parameters:")
+        print(toml.dumps(config["calibration"]["calculate"]["extrinsics"]))
 
-    parameter_to_edit = input("Enter the parameter you want to edit: ")
+        parameter_to_edit = input(
+            "Enter the parameter you want to edit (e.g., calculate_extrinsics), or type 'exit' to quit: ")
 
-    if parameter_to_edit in config["project"]:
-        new_value = input(f"Enter the new value for {parameter_to_edit}: ")
-        config["project"][parameter_to_edit] = new_value
+        if parameter_to_edit.lower() == 'exit':
+            print("Exiting...")
+            break
 
-        # Write the modified contents back to the .toml file
-        with open("Config.toml", "w") as f:
-            toml.dump(config, f)
+        if parameter_to_edit in config["calibration"]["calculate"]["extrinsics"]:
+            current_value = config["calibration"]["calculate"]["extrinsics"][parameter_to_edit]
+            new_value = input(
+                f"Current value for {parameter_to_edit} is {current_value}. Enter the new value (true/false), or type "
+                f"'exit' to quit: ")
 
-        print("Project parameter updated successfully.")
-    else:
-        print("Invalid parameter.")
+            if new_value.lower() == 'exit':
+                print("Exiting...")
+                break
+
+            # Ensure that the input is valid
+            if new_value.lower() in ['true', 'false']:
+                # Convert input to boolean
+                new_value = new_value.lower() == 'true'
+                config["calibration"]["calculate"]["extrinsics"][parameter_to_edit] = new_value
+
+                # Write the modified contents back to the .toml file
+                with open("Config.toml", "w") as f:
+                    toml.dump(config, f)
+
+                print("Project parameter updated successfully.")
+            else:
+                print("Invalid input. Please enter 'true' or 'false'.")
+        else:
+            print("Invalid parameter.")
 
 
 def workflow():
@@ -70,10 +91,10 @@ def workflow():
         fileHandler.runOpenPose("h", 4013, 4655)
 
     elif choice == "2":
-        fileHandler.addIntrinsicsImages(0,4013)
+        fileHandler.addIntrinsicsImages(0, 4013)
 
     elif choice == "3":
-        fileHandler.addExtrinsicsImages("C:/Users/4dviz/Videos/bak/")
+        fileHandler.addExtrinsicImages("C:/Users/4dviz/Videos/bak/")
 
     elif choice == "4":
         fileHandler.runOpenPose("v", 4013, 4655)
@@ -82,7 +103,7 @@ def workflow():
 
         fileHandler.addIntrinsicsImages(0, 4013)
 
-        fileHandler.addExtrinsicsImages("C:/Users/4dviz/Videos/bak/")
+        fileHandler.addExtrinsicImages("C:/Users/4dviz/Videos/bak/")
 
     else:
         print("Invalid choice. Please enter 1, 2, 3, or 4.")
