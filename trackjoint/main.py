@@ -1,6 +1,6 @@
 import os
 import toml
-
+import numpy as np
 from trackjoint import fileHandler
 
 
@@ -26,53 +26,34 @@ def main_menu():
 
 
 def view_project_parameters():
-    # Load the contents of the .toml file
     with open("Config.toml", "r") as f:
         config = toml.load(f)
     print(toml.dumps(config))
+    main_menu()
 
 
 def edit_project_parameters():
-    # Load the contents of the .toml file
     with open("Config.toml", "r") as f:
         config = toml.load(f)
 
     while True:
-        print("Current project parameters:")
-        print(toml.dumps(config["calibration"]["calculate"]["extrinsics"]))
+        print("Do you want to change: ")
+        print("1. Recalculate extrinsic")
+        print("2. Recalculate intrinsic")
+        print("3. Both")
+        print("4. exit")
+        choice = input("Enter your choice: ")
 
-        parameter_to_edit = input(
-            "Enter the parameter you want to edit (e.g., calculate_extrinsics), or type 'exit' to quit: ")
-
-        if parameter_to_edit.lower() == 'exit':
+        if choice == '4':
             print("Exiting...")
             break
 
-        if parameter_to_edit in config["calibration"]["calculate"]["extrinsics"]:
-            current_value = config["calibration"]["calculate"]["extrinsics"][parameter_to_edit]
-            new_value = input(
-                f"Current value for {parameter_to_edit} is {current_value}. Enter the new value (true/false), or type "
-                f"'exit' to quit: ")
+        if choice == "1":
+            toml.dumps(config['calibration']['calculate']['intrinsics'])
+            toml.dumps(config['calibration']['calculate']['extrinsics'])
 
-            if new_value.lower() == 'exit':
-                print("Exiting...")
-                break
-
-            # Ensure that the input is valid
-            if new_value.lower() in ['true', 'false']:
-                # Convert input to boolean
-                new_value = new_value.lower() == 'true'
-                config["calibration"]["calculate"]["extrinsics"][parameter_to_edit] = new_value
-
-                # Write the modified contents back to the .toml file
-                with open("Config.toml", "w") as f:
-                    toml.dump(config, f)
-
-                print("Project parameter updated successfully.")
-            else:
-                print("Invalid input. Please enter 'true' or 'false'.")
-        else:
-            print("Invalid parameter.")
+        elif choice == "2":
+            toml.dumps(config['pose'])
 
 
 def workflow():

@@ -79,7 +79,7 @@ def getImageSelection(path, imageStart, imageEnd):
     return list_files_in_folder(path)[imageStart:imageEnd]
 
 
-def addExtrinsicsImages(path):
+def addExtrinsicImages(path):
     destinationPath = 'C:/Users/4dviz/PycharmProjects/pythonProject/lorl/S00_Demo_Session/S00_Calibration/extrinsics/'
     delete_files_in_folder(destinationPath + "ext_cam1_img")
     delete_files_in_folder(destinationPath + "ext_cam2_img")
@@ -101,15 +101,18 @@ def addIntrinsicsImages(start, end):
     delete_files_in_folder(destinationPath + "int_cam3_img")
 
     source_directory = r'C:\Users\4dviz\Videos\bch\h'  # Change this to your source directory
-    target_directory = r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration\intrinsics\int_cam1_img'  # Change this to your target directory
+    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
+                        r'\intrinsics\int_cam1_img')  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
     source_directory = r'C:\Users\4dviz\Videos\bch\m'  # Change this to your source directory
-    target_directory = r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration\intrinsics\int_cam2_img'  # Change this to your target directory
+    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
+                        r'\intrinsics\int_cam2_img')  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
     source_directory = r'C:\Users\4dviz\Videos\bch\v'  # Change this to your source directory
-    target_directory = r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration\intrinsics\int_cam3_img'  # Change this to your target directory
+    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
+                        r'\intrinsics\int_cam3_img')  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
 
@@ -134,7 +137,7 @@ def copy_every_n_picture(source_dir, target_dir, start, end, n=50):
         for file in files:
             if file.lower().endswith(image_extensions):
                 counter += 1
-                if counter % n == 0 and counter > start and counter < end:
+                if counter % n == 0 and start < counter < end:
                     source_file_path = os.path.join(root, file)
                     target_file_path = os.path.join(target_dir, file)
                     shutil.copy2(source_file_path, target_file_path)
@@ -145,7 +148,9 @@ def runOpenPose(cam, imageStart, imageEnd):
     # Openpose
     import subprocess
 
-    jsonPath = "C:/Users/4dviz/PycharmProjects/pythonProject/lorl/S00_Demo_Session/S00_P00_Participant/S00_P00_T01_BalancingTrial/pose/"
+    jsonPath = ("C:/Users/4dviz/PycharmProjects/pythonProject/lorl/S00_Demo_Session/S00_P00_Participant"
+                "/S00_P00_T01_BalancingTrial/pose/")
+
     if cam == "v":
         jsonPath += "cam1_json"
     elif cam == "m":
@@ -157,7 +162,7 @@ def runOpenPose(cam, imageStart, imageEnd):
 
     delete_files_in_folder(jsonPath)
 
-    imagesPath = f"C:/Users/4dviz/Videos/bch/{cam}"
+    imagesPath = f"C:/Users/4dviz/Videos/bch/{cam}"  # change to openpose image path
 
     openPoseImages = list_files_in_folder(imagesPath)[imageStart:imageEnd]
     destination_folder = f"C:/Users/4dviz/Videos/openpose/{cam}"
@@ -166,7 +171,8 @@ def runOpenPose(cam, imageStart, imageEnd):
     for image in openPoseImages:
         copy_image(f"{imagesPath}/{image}", destination_folder)
 
-    command = f"C:/Users/4dviz/Bachelor050/openpose/bin/OpenPoseDemo.exe  --model_pose BODY_25B --net_resolution 1280x1024  --image_dir {destination_folder}  --write_json {jsonPath}"
+    command = (f"C:/Users/4dviz/Bachelor050/openpose/bin/OpenPoseDemo.exe  --model_pose BODY_25B --net_resolution "
+               f"1280x1024  --image_dir {destination_folder}  --write_json {jsonPath}")  # Change to openpose directory
     # Running the 'dir' command
     result = subprocess.run(command, shell=True, text=True, capture_output=True,
                             cwd="C:/Users/4dviz/Bachelor050/openpose/")
