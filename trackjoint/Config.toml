@@ -37,17 +37,9 @@ participant_mass = 70 # kg
 calibration_type = 'calculate' # 'convert' or 'calculate'
 
    [calibration.convert]
-   convert_from = 'qualisys' # 'qualisys', 'optitrack', vicon', 'opencap', 'easymocap', 'biocv', 'anipose', or 'freemocap'
+   convert_from = 'qualisys'# qualisys
       [calibration.convert.qualisys]
       binning_factor = 1 # Usually 1, except when filming in 540p where it usually is 2
-      [calibration.convert.optitrack]  # See readme for instructions
-      [calibration.convert.vicon]      # No parameter needed
-      [calibration.convert.opencap]    # No parameter needed
-      [calibration.convert.easymocap]  # No parameter needed
-      [calibration.convert.biocv]      # No parameter needed
-      [calibration.convert.anipose]    # No parameter needed
-      [calibration.convert.freemocap]  # No parameter needed
-
 
    [calibration.calculate]
       # Camera properties, theoretically need to be calculated only once in a camera lifetime
