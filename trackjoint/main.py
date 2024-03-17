@@ -1,6 +1,5 @@
 import os
 import toml
-import numpy as np
 from trackjoint import fileHandler
 
 
@@ -10,7 +9,7 @@ def main_menu():
     print("3. Run workflow")
     print("4. Exit")
 
-    choice = input("Enter your choice (1/2/3/4): ")
+    choice = input("Enter your choice: ")
 
     if choice == "1":
         view_project_parameters()
@@ -38,9 +37,9 @@ def edit_project_parameters():
 
     while True:
         print("Do you want to change: ")
-        print("1. Recalculate extrinsic")
-        print("2. Recalculate intrinsic")
-        print("3. Both")
+        print("1. Change extrinsic")
+        print("2. Change intrinsic")
+        print("3. Change Both")
         print("4. exit")
         choice = input("Enter your choice: ")
 
@@ -49,11 +48,28 @@ def edit_project_parameters():
             break
 
         if choice == "1":
-            toml.dumps(config['calibration']['calculate']['intrinsics'])
-            toml.dumps(config['calibration']['calculate']['extrinsics'])
+            config['calibration']['calculate']['extrinsics']['calculate_extrinsics'] = not \
+                config['calibration']['calculate']['extrinsics']['calculate_extrinsics']
+            print("Value of 'overwrite_intrinsics' changed to:",
+                  config['calibration']['calculate']['extrinsics']['calculate_extrinsics'])
 
         elif choice == "2":
-            toml.dumps(config['pose'])
+            config['calibration']['calculate']['intrinsics']['overwrite_intrinsics'] = not \
+                config['calibration']['calculate']['intrinsics']['overwrite_intrinsics']
+            print("Value of 'overwrite_intrinsics' changed to:",
+                  config['calibration']['calculate']['extrinsics']['overwrite_intrinsics'])
+
+        elif choice == "3":
+            config['calibration']['calculate']['intrinsics']['overwrite_intrinsics'] = not \
+                config['calibration']['calculate']['intrinsics']['overwrite_intrinsics']
+
+            config['calibration']['calculate']['extrinsics']['calculate_extrinsics'] = not \
+                config['calibration']['calculate']['extrinsics']['calculate_extrinsics']
+            print("Value of 'overwrite_intrinsics' changed to:",
+                  config['calibration']['calculate'])
+
+        with open("Config.toml", "w") as f:
+            toml.dump(config, f)
 
 
 def workflow():
@@ -64,7 +80,7 @@ def workflow():
     print("3. Run Intrinsics")
     print("4. Run All")
 
-    choice = input("Enter your choice (1/2/3/4): ")
+    choice = input("Enter your choice: ")
 
     if choice == "1":
         fileHandler.runOpenPose("v", 4013, 4655)
@@ -75,7 +91,8 @@ def workflow():
         fileHandler.addIntrinsicsImages(0, 4013)
 
     elif choice == "3":
-        fileHandler.addExtrinsicImages("C:/Users/4dviz/Videos/bak/")
+        fileHandler.addExtrinsicImages(
+            "C:/Users/4dviz/Videos/bak/")  # change to accordingly to where the recordings are
 
     elif choice == "4":
         fileHandler.runOpenPose("v", 4013, 4655)
@@ -84,7 +101,8 @@ def workflow():
 
         fileHandler.addIntrinsicsImages(0, 4013)
 
-        fileHandler.addExtrinsicImages("C:/Users/4dviz/Videos/bak/")
+        fileHandler.addExtrinsicImages(
+            "C:/Users/4dviz/Videos/bak/")  # change to accordingly to where the recordings are
 
     else:
         print("Invalid choice. Please enter 1, 2, 3, or 4.")
