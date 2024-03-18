@@ -5737,3 +5737,42 @@ Calculating intrinsic parameters...
 Camera int_cam1_img:
 The folder /home/stian/code/newz/markerless/trackjoint/S00_Calibration/intrinsics/int_cam1_img does not exist or does not contain any files with extension .ppm.
 NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder /home/stian/code/newz/markerless/trackjoint/S00_Calibration/intrinsics/int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder /home/stian/code/newz/markerless/trackjoint/S00_Calibration/intrinsics/int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder /home/stian/code/newz/markerless/trackjoint/S00_Calibration/intrinsics/int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
