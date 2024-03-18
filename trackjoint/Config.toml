@@ -35,7 +35,8 @@ participant_mass = 70 # kg
 [preprocessing]
 # This is for when we want to track actual markers.
 run_marker_detection = true
-images_folder_path = 'path/to/images/folder'
+draw_window = true
+images_folder_path = '/home/stian/code/newz/markerless/markers'
 
 # Take heart, calibration is not that complicated once you get the hang of it!
 [calibration]

@@ -1,11 +1,16 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import cv2
 import os
 import numpy as np
+import toml
 import json
 import argparse
 
-def process_image(image_path, window=True):
-    # Read the image
+def process_image(image_path):
+
+    config_dict = toml.load('Config.toml')
     image = cv2.imread(image_path)
 
     if image is None:
@@ -27,12 +32,12 @@ def process_image(image_path, window=True):
         x, y, w, h = cv2.boundingRect(contour)
         center_x = x + w // 2
         center_y = y + h // 2
-        cv2.circle(image, (center_x, center_y), 5, (255, 0, 0), -1)
+        cv2.circle(image, (center_x, center_y), 7, (0, 0, 0), -1)
         # Adding the center coordinates and a fixed accuracy of 1.0 to the keypoints list
         keypoints_2d.extend([center_x, center_y, 1.0])
 
     # Display the result
-    if window:
+    if config_dict['preprocessing']['draw_window'] is True:
         cv2.imshow('Markers Detected', image)
         cv2.waitKey(0)  # Wait for a key press to continue
         cv2.destroyAllWindows()
@@ -71,7 +76,8 @@ def processMarkerImages(folder_path, cam):
        Ex: cam is cam1_json
     """
 
-    save_path = os.path.join('..', 'S00_MotionTrackingData', 'T00_JumpTrial', 'marker', f"{cam}_json")
+
+    save_path = os.path.join('S00_MotionTrackingData', 'T00_JumpTrial', 'marker', f"{cam}_json")
     #print(save_path)
 
     valid_extensions = ('.jpg', '.jpeg', '.png', '.raw', '.pgm', '.ppm')
@@ -82,21 +88,17 @@ def processMarkerImages(folder_path, cam):
     for file in image_files:
         image_path = os.path.join(folder_path, cam, file)
         keypoints_2d = process_image(image_path)
-        json_save_path = os.path.join(save_path, os.path.basename(image_path) + ".json")
+        json_save_path = os.path.join(save_path, os.path.basename(image_path.replace('.ppm','')) + ".json")
         print(json_save_path)
         create_openpose_json(json_save_path, keypoints_2d)
     
     print("Processing and file creation complete!")
 
 
-parser = argparse.ArgumentParser(description='Process images to detect markers and generate keypoints JSON.')
-parser.add_argument('--folder_path', type=str, help='Path to the folder containing images to be processed.')
-args = parser.parse_args()
 
+def run(config_dict):
 
-if __name__ == '__main__':
-    drawWindow = True
-    folder_path = args.folder_path
+    folder_path = config_dict['preprocessing']['images_folder_path']
 
     if not folder_path:
         raise ValueError("No folder path provided. Please specify the folder path using --folder_path.")

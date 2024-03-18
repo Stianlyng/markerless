@@ -5605,3 +5605,94 @@ Filtering 3D coordinates for T00_JumpTrial, for all frames.
 Project directory: /home/stian/code/pythonProject/S00_MotionTrackingData/T00_JumpTrial
 --> Filter type: Butterworth low-pass. Order 4, Cut-off frequency 6 Hz.
 Filtered 3D coordinates are stored at /home/stian/code/pythonProject/S00_MotionTrackingData/T00_JumpTrial/pose-3d/T00_JumpTrial_filt_butterworth_0-2667.trc.
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: /home/stian/code/newz/markerless/trackjoint/S00_Calibration
