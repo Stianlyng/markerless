@@ -32,6 +32,11 @@ participant_height = 1.82 # m
 participant_mass = 70 # kg
 
 
+[preprocessing]
+# This is for when we want to track actual markers.
+run_marker_detection = true
+images_folder_path = 'path/to/images/folder'
+
 # Take heart, calibration is not that complicated once you get the hang of it!
 [calibration]
 calibration_type = 'calculate' # 'convert' or 'calculate'

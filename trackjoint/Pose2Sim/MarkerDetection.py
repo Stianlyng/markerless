@@ -2,10 +2,15 @@ import cv2
 import os
 import numpy as np
 import json
+import argparse
 
 def process_image(image_path, window=True):
     # Read the image
     image = cv2.imread(image_path)
+
+    if image is None:
+        print(f"Error: Unable to load image at {image_path}. Check file path and integrity.")
+        return []
 
     # Convert to grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -61,18 +66,55 @@ def create_openpose_json(image_path, keypoints_2d):
         json.dump(data, json_file, indent=4)
 
 
-drawWindow = True
+def processMarkerImages(folder_path, cam):
+    """
+       Ex: cam is cam1_json
+    """
 
-# Specify the folder path
-folder_path = 'h/'
+    save_path = os.path.join('..', 'S00_MotionTrackingData', 'T00_JumpTrial', 'marker', f"{cam}_json")
+    #print(save_path)
 
-# Get all image files in the folder
-image_files = [f for f in os.listdir(folder_path) if f.endswith(('.jpg', '.jpeg', '.png', '.raw', '.pgm', '.ppm'))]
+    valid_extensions = ('.jpg', '.jpeg', '.png', '.raw', '.pgm', '.ppm')
+    
+    image_files = [f for f in os.listdir(f"{folder_path}/{cam}") if f.endswith(valid_extensions)]
+    print(folder_path)
+    
+    for file in image_files:
+        image_path = os.path.join(folder_path, cam, file)
+        keypoints_2d = process_image(image_path)
+        json_save_path = os.path.join(save_path, os.path.basename(image_path) + ".json")
+        print(json_save_path)
+        create_openpose_json(json_save_path, keypoints_2d)
+    
+    print("Processing and file creation complete!")
 
-# Process each image, generate keypoints, and create a JSON file
-for file in image_files:
-    image_path = os.path.join(folder_path, file)
-    keypoints_2d = process_image(image_path, drawWindow)
-    create_openpose_json(image_path, keypoints_2d)
 
-print("Processing and file creation complete!")
+parser = argparse.ArgumentParser(description='Process images to detect markers and generate keypoints JSON.')
+parser.add_argument('--folder_path', type=str, help='Path to the folder containing images to be processed.')
+args = parser.parse_args()
+
+
+if __name__ == '__main__':
+    drawWindow = True
+    folder_path = args.folder_path
+
+    if not folder_path:
+        raise ValueError("No folder path provided. Please specify the folder path using --folder_path.")
+
+    if not os.path.exists(folder_path) or not os.path.isdir(folder_path):
+        print(f"The path {folder_path} does not exist or is not a directory.")
+
+    dirs = os.listdir(folder_path)
+    
+    directories = [i for i in dirs if os.path.isdir(os.path.join(folder_path, i))]
+    
+    cam_directories = ['cam1', 'cam2', 'cam3']
+    
+    for cam in cam_directories:
+        if cam in directories:
+            print(f"'{cam}' exists in the listed directories.")
+            processMarkerImages(folder_path, cam)
+        else:
+            print(f"'{cam}' does not exist in the listed directories.")
+
+
