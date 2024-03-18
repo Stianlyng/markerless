@@ -34,9 +34,14 @@ participant_mass = 70 # kg
 
 [preprocessing]
 # This is for when we want to track actual markers.
-run_marker_detection = true
+run_marker_detection = true # todo; make it so that it uses marker instead of pose dir
 draw_window = true
 images_folder_path = '/home/stian/code/newz/markers'
+
+# This is for removing the actual markers from the image for accurate openpose runs
+# Script is located in Pose2SimUtils
+generate_markerless_images = false
+openPose_img_path = '/home/stian/code/newz/openpose'
 
 # Take heart, calibration is not that complicated once you get the hang of it!
 [calibration]
