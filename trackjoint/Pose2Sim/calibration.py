@@ -222,6 +222,66 @@ def read_extrinsic_yml(extrinsic_path):
         T.append(extrinsic_yml.getNode(f'T_{name}').mat().flatten())
     return R, T
 
+def calib_calc_fun(calib_dir, intrinsics_config_dict, extrinsics_config_dict):
+    '''
+    Calibrates intrinsic and extrinsic parameters
+    from images or videos of a checkerboard
+    or retrieve them from a file
+
+    INPUTS:
+    - calib_dir: directory containing intrinsic and extrinsic folders, each populated with camera directories
+    - intrinsics_config_dict: dictionary of intrinsics parameters (overwrite_intrinsics, show_detection_intrinsics, intrinsics_extension, extract_every_N_sec, intrinsics_corners_nb, intrinsics_square_size, intrinsics_marker_size, intrinsics_aruco_dict)
+    - extrinsics_config_dict: dictionary of extrinsics parameters (calculate_extrinsics, show_detection_extrinsics, extrinsics_extension, extrinsics_corners_nb, extrinsics_square_size, extrinsics_marker_size, extrinsics_aruco_dict, object_coords_3d)
+
+    OUTPUTS:
+    - ret: residual reprojection error in _px_: list of floats
+    - C: camera name: list of strings
+    - S: image size: list of list of floats
+    - D: distorsion: list of arrays of floats
+    - K: intrinsic parameters: list of 3x3 arrays of floats
+    - R: extrinsic rotation: list of arrays of floats (Rodrigues)
+    - T: extrinsic translation: list of arrays of floats
+    '''
+    
+    overwrite_intrinsics = intrinsics_config_dict.get('overwrite_intrinsics')
+    calculate_extrinsics = extrinsics_config_dict.get('calculate_extrinsics')
+
+    # retrieve intrinsics if calib_file found and if overwrite_intrinsics=False
+    try:
+        calib_file = glob.glob(os.path.join(calib_dir, f'Calib*.toml'))[0]
+    except:
+        pass
+    if not overwrite_intrinsics and 'calib_file' in locals():
+        logging.info(f'\nPreexisting calibration file found: \'{calib_file}\'.')
+        logging.info(f'\nRetrieving intrinsic parameters from file. Set "overwrite_intrinsics" to true in Config.toml to recalculate them.')
+        calib_file = glob.glob(os.path.join(calib_dir, f'Calib*.toml'))[0]
+        calib_data = toml.load(calib_file)
+
+        ret, C, S, D, K, R, T = [], [], [], [], [], [], []
+        for cam in calib_data:
+            if cam != 'metadata':
+                ret += [0.0]
+                C += [calib_data[cam]['name']]
+                S += [calib_data[cam]['size']]
+                K += [np.array(calib_data[cam]['matrix'])]
+                D += [calib_data[cam]['distortions']]
+                R += [[0.0, 0.0, 0.0]]
+                T += [[0.0, 0.0, 0.0]]
+    
+    # calculate intrinsics otherwise
+    else:
+        logging.info(f'\nCalculating intrinsic parameters...')
+        ret, C, S, D, K, R, T = calibrate_intrinsics(calib_dir, intrinsics_config_dict)
+
+    # calculate extrinsics
+    if calculate_extrinsics:
+        logging.info(f'\nCalculating extrinsic parameters...')
+        ret, C, S, D, K, R, T = calibrate_extrinsics(calib_dir, extrinsics_config_dict, C, S, K, D)
+    else:
+        logging.info(f'\nExtrinsic parameters won\'t be calculated. Set "calculate_extrinsics" to true in Config.toml to calculate them.')
+
+    return ret, C, S, D, K, R, T
+
 def calibrate_intrinsics(calib_dir, intrinsics_config_dict):
     '''
     Calculate intrinsic parameters
@@ -953,7 +1013,7 @@ def calibrate_cams_all(config):
     # Map calib function
     calib_mapping = {
         'convert_qualisys': calib_qca_fun,
-        'calculate': calib_calc_fun,
+        'calculate': calib_calc_fun
         }
     calib_fun = calib_mapping[calib_full_type]
 
