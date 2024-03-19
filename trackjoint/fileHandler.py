@@ -80,7 +80,7 @@ def getImageSelection(path, imageStart, imageEnd):
 
 
 def addExtrinsicImages(path):
-    destinationPath = 'C:/Users/4dviz/PycharmProjects/pythonProject/lorl/S00_Demo_Session/S00_Calibration/extrinsics/'
+    destinationPath = 'C:/Users/4dviz/Bachelor050/code/markerless/trackjoint/S00_Calibration/extrinsics/'
     delete_files_in_folder(destinationPath + "ext_cam1_img")
     delete_files_in_folder(destinationPath + "ext_cam2_img")
     delete_files_in_folder(destinationPath + "ext_cam3_img")
@@ -95,24 +95,21 @@ def addExtrinsicImages(path):
 
 
 def addIntrinsicsImages(start, end):
-    destinationPath = 'C:/Users/4dviz/PycharmProjects/pythonProject/lorl/S00_Demo_Session/S00_Calibration/intrinsics/'
+    destinationPath = 'C:/Users/4dviz/Bachelor050/code/markerless/trackjoint/S00_Calibration/intrinsics/'
     delete_files_in_folder(destinationPath + "int_cam1_img")
     delete_files_in_folder(destinationPath + "int_cam2_img")
     delete_files_in_folder(destinationPath + "int_cam3_img")
 
-    source_directory = r'C:\Users\4dviz\Videos\bch\h'  # Change this to your source directory
-    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
-                        r'\intrinsics\int_cam1_img')  # Change this to your target directory
+    source_directory = r'C:\Users\4dviz\Videos\fredag\h'  # Change this to your source directory
+    target_directory = r'/Users/4dviz/Bachelor050/code/markerless/trackjoint/S00_Calibration/intrinsics/int_cam1_img'  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
-    source_directory = r'C:\Users\4dviz\Videos\bch\m'  # Change this to your source directory
-    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
-                        r'\intrinsics\int_cam2_img')  # Change this to your target directory
+    source_directory = r'C:\Users\4dviz\Videos\fredag\m'  # Change this to your source directory
+    target_directory = (r'/Users/4dviz/Bachelor050/code/markerless/trackjoint/S00_Calibration/intrinsics/int_cam2_img')  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
-    source_directory = r'C:\Users\4dviz\Videos\bch\v'  # Change this to your source directory
-    target_directory = (r'C:\Users\4dviz\PycharmProjects\pythonProject\lorl\S00_Demo_Session\S00_Calibration'
-                        r'\intrinsics\int_cam3_img')  # Change this to your target directory
+    source_directory = r'C:\Users\4dviz\Videos\fredag\v'  # Change this to your source directory
+    target_directory = (r'/Users/4dviz/Bachelor050/code/markerless/trackjoint/S00_Calibration/intrinsics/int_cam3_img')  # Change this to your target directory
     copy_every_n_picture(source_directory, target_directory, start, end)
 
 

@@ -1,6 +1,6 @@
 import os
 import toml
-from trackjoint import fileHandler
+import fileHandler
 
 
 def main_menu():
@@ -76,8 +76,8 @@ def workflow():
     from Pose2Sim import Pose2Sim
 
     print("1. Run OpenPose")
-    print("2. Run extrinsic")
-    print("3. Run Intrinsics")
+    print("2. Run Intrinsics")
+    print("3. Run Extrinsic")
     print("4. Run All")
 
     choice = input("Enter your choice: ")

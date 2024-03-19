@@ -5605,3 +5605,214 @@ Filtering 3D coordinates for T00_JumpTrial, for all frames.
 Project directory: /home/stian/code/pythonProject/S00_MotionTrackingData/T00_JumpTrial
 --> Filter type: Butterworth low-pass. Order 4, Cut-off frequency 6 Hz.
 Filtered 3D coordinates are stored at /home/stian/code/pythonProject/S00_MotionTrackingData/T00_JumpTrial/pose-3d/T00_JumpTrial_filt_butterworth_0-2667.trc.
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\intrinsics\int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\intrinsics\int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Preexisting calibration file found: 'C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\Calib_board.toml'.
+
+Retrieving intrinsic parameters from file. Set "overwrite_intrinsics" to true in Config.toml to recalculate them.
+
+Calculating extrinsic parameters...
+
+Camera ext_cam1_img:
+img-02222024124241-702.ppm: Corners found.
+
+Camera ext_cam2_img:
+img-02222024124240-702.ppm: Corners found.
+
+Camera ext_cam3_img:
+img-02222024124238-702.ppm: Corners found.
+
+--> Residual (RMS) calibration errors for each camera are respectively [16.141, 30.865, 37.496] px, 
+which corresponds to [71.536, 126.597, 164.401] mm.
+
+Calibration file is stored at C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\Calib_board.toml.
+Calibration took 23.05 s.
+
+
+---------------------------------------------------------------------
+Associating persons for T00_JumpTrial, for all frames.
+---------------------------------------------------------------------
+
+Project directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_MotionTrackingData\T00_JumpTrial
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Preexisting calibration file found: 'C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\Calib_board.toml'.
+
+Retrieving intrinsic parameters from file. Set "overwrite_intrinsics" to true in Config.toml to recalculate them.
+
+Calculating extrinsic parameters...
+
+Camera ext_cam1_img:
+img-02222024123818-0.ppm: Corners not found. Deleting image from the project.
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Preexisting calibration file found: 'C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\Calib_board.toml'.
+
+Retrieving intrinsic parameters from file. Set "overwrite_intrinsics" to true in Config.toml to recalculate them.
+
+Calculating extrinsic parameters...
+
+Camera ext_cam1_img:
+img-02222024123818-0.ppm: Corners not found. Deleting image from the project.
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\intrinsics\int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+The folder C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration\intrinsics\int_cam1_img does not exist or does not contain any files with extension .ppm.
+NoneType: None
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+temp-02232024144041-49.ppm: Corners not found. Deleting image from the project.
+temp-02232024144100-99.ppm: Corners not found. Deleting image from the project.
+temp-02232024144119-149.ppm: Corners not found. Deleting image from the project.
+temp-02232024144139-199.ppm: Corners not found. Deleting image from the project.
+temp-02232024144158-249.ppm: Corners not found. Deleting image from the project.
+temp-02232024144217-299.ppm: Corners not found. Deleting image from the project.
+temp-02232024144236-349.ppm: Corners not found. Deleting image from the project.
+temp-02232024144255-399.ppm: Corners not found. Deleting image from the project.
+temp-02232024144315-449.ppm: Corners not found. Deleting image from the project.
+temp-02232024144334-499.ppm: Corners not found. Deleting image from the project.
+temp-02232024144353-549.ppm: Corners not found. Deleting image from the project.
+temp-02232024144412-599.ppm: Corners not found. Deleting image from the project.
+temp-02232024144431-649.ppm: Corners not found. Deleting image from the project.
+temp-02232024144450-699.ppm: Corners not found. Deleting image from the project.
+temp-02232024144508-749.ppm: Corners not found. Deleting image from the project.
+temp-02232024144527-799.ppm: Corners found.
+temp-02232024144546-849.ppm: Corners found.
+temp-02232024144605-899.ppm: Corners not found. Deleting image from the project.
+temp-02232024144624-949.ppm: Corners found.
+temp-02232024144643-1000.ppm: Corners not found. Deleting image from the project.
+temp-02232024144702-1049.ppm: Corners not found. Deleting image from the project.
+temp-02232024144721-1099.ppm: Corners not found. Deleting image from the project.
+temp-02232024144739-1149.ppm: Corners found.
+temp-02232024144758-1199.ppm: Corners found.
+temp-02232024144817-1249.ppm: Corners found.
+temp-02232024144836-1299.ppm: Corners not found. Deleting image from the project.
+temp-02232024144855-1349.ppm: Corners not found. Deleting image from the project.
+temp-02232024144915-1399.ppm: Corners not found. Deleting image from the project.
+temp-02232024144934-1449.ppm: Corners not found. Deleting image from the project.
+temp-02232024144953-1499.ppm: Corners not found. Deleting image from the project.
+temp-02232024145013-1549.ppm: Corners not found. Deleting image from the project.
+temp-02232024145032-1599.ppm: Corners not found. Deleting image from the project.
+temp-02232024145051-1649.ppm: Corners not found. Deleting image from the project.
+temp-02232024145110-1699.ppm: Corners not found. Deleting image from the project.
+temp-02232024145129-1749.ppm: Corners not found. Deleting image from the project.
+
+
+---------------------------------------------------------------------
+Camera calibration
+---------------------------------------------------------------------
+
+Calibration directory: C:\Users\4dviz\Bachelor050\code\markerless\trackjoint\S00_Calibration
+
+Calculating intrinsic parameters...
+
+Camera int_cam1_img:
+temp-02232024144041-49.ppm: Corners not found. Deleting image from the project.
+temp-02232024144100-99.ppm: Corners not found. Deleting image from the project.
+temp-02232024144119-149.ppm: Corners not found. Deleting image from the project.
+temp-02232024144139-199.ppm: Corners not found. Deleting image from the project.
+temp-02232024144158-249.ppm: Corners not found. Deleting image from the project.
+temp-02232024144217-299.ppm: Corners not found. Deleting image from the project.
+temp-02232024144236-349.ppm: Corners not found. Deleting image from the project.
+temp-02232024144255-399.ppm: Corners not found. Deleting image from the project.
+temp-02232024144315-449.ppm: Corners not found. Deleting image from the project.
+temp-02232024144334-499.ppm: Corners not found. Deleting image from the project.
+temp-02232024144353-549.ppm: Corners not found. Deleting image from the project.
+temp-02232024144412-599.ppm: Corners not found. Deleting image from the project.
+temp-02232024144431-649.ppm: Corners not found. Deleting image from the project.
+temp-02232024144450-699.ppm: Corners not found. Deleting image from the project.
+temp-02232024144508-749.ppm: Corners not found. Deleting image from the project.
+temp-02232024144527-799.ppm: Corners found.
+temp-02232024144546-849.ppm: Corners found.
+temp-02232024144605-899.ppm: Corners not found. Deleting image from the project.
+temp-02232024144624-949.ppm: Corners found.
+temp-02232024144643-1000.ppm: Corners not found. Deleting image from the project.
+temp-02232024144702-1049.ppm: Corners not found. Deleting image from the project.
+temp-02232024144721-1099.ppm: Corners not found. Deleting image from the project.
+temp-02232024144739-1149.ppm: Corners found.
+temp-02232024144758-1199.ppm: Corners found.
+temp-02232024144817-1249.ppm: Corners found.
+temp-02232024144836-1299.ppm: Corners not found. Deleting image from the project.
+temp-02232024144855-1349.ppm: Corners not found. Deleting image from the project.
+temp-02232024144915-1399.ppm: Corners not found. Deleting image from the project.
+temp-02232024144934-1449.ppm: Corners not found. Deleting image from the project.
+temp-02232024144953-1499.ppm: Corners not found. Deleting image from the project.
+temp-02232024145013-1549.ppm: Corners not found. Deleting image from the project.
+temp-02232024145032-1599.ppm: Corners not found. Deleting image from the project.
+temp-02232024145051-1649.ppm: Corners not found. Deleting image from the project.
+temp-02232024145110-1699.ppm: Corners not found. Deleting image from the project.
+temp-02232024145129-1749.ppm: Corners not found. Deleting image from the project.
