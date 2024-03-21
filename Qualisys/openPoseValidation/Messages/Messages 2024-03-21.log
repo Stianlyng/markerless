@@ -1,0 +1,75 @@
+1	11:06:35	Realtime started	
+1	12:02:15	Calibration started	
+1	12:02:23	Calibration finished after 7.6576 seconds	
+1	12:02:24	File created	
+1	12:02:24	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\Calibrations\20240321_120114.qca	
+1	12:02:27	File closed	
+1	12:02:33	Realtime started	
+1	12:43:38	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:43:44	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:43:46	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:44:27	Not all gaps were filled	5 gaps out of 9 were filled. The other 4 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	12:44:27	File created	
+1	12:44:48	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:46:43	File closed	
+1	12:46:46	Realtime started	
+1	12:46:56	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:47:09	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:47:29	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:47:29	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:47:30	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	12:54:27	Not all gaps were filled	32 gaps out of 71 were filled. The other 39 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	12:54:27	File created	
+1	12:59:45	File closed	
+1	12:59:47	Realtime started	
+1	13:00:29	Not all gaps were filled	6 gaps out of 12 were filled. The other 6 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	13:00:29	File created	
+1	13:09:19	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:14:47	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\AIM models\Measurement16.qtm	
+1	13:15:25	File closed	
+1	13:15:28	Realtime started	
+1	13:16:04	Q: 'WaistLFront' could not be found.	Q: 'WaistLFront' could not be found.
+1	13:16:04	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:18:08	Not all gaps were filled	17 gaps out of 21 were filled. The other 4 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	13:18:08	File created	
+1	13:18:23	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:20:42	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:21:31	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:21:41	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:22:42	AIM model application results, 1 model partially applied	1 model partially applied.  Note: Partial success, or failure to identify, usually indicates that the model needs more training.  Correct the identification by hand and then add the fully identified file to the AIM model. Use "Add to existing model(s)" to improve AIM performance. 
+1	13:29:48	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\AIM models\workingSkeleton.qtm	
+1	13:30:23	File closed	
+1	13:30:24	File loaded from C:\Users\vizlab_stud\Documents\openPoseValidation\AIM models\Measurement16.qtm	
+1	13:31:00	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:31:01	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:31:02	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.	No skeleton definition(s) could be created. Verify that the markers are labeled and prefixed correctly.
+1	13:41:01	File closed	
+1	13:41:04	Realtime started	
+1	13:42:50	Not all gaps were filled	4 gaps out of 7 were filled. The other 3 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	13:42:50	File created	
+1	13:45:17	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\WalkingTrial.qtm	
+1	13:46:05	File closed	
+1	13:46:07	Realtime started	
+1	13:50:38	File created	
+1	13:51:16	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\thowTrial.qtm	
+1	13:51:21	File closed	
+1	13:51:24	Realtime started	
+1	13:56:14	Not all gaps were filled	6 gaps out of 9 were filled. The other 3 gaps were longer than 10 frames (max gap length).  Adjust maximum gap length in trajectories settings in project options or in reprocessing trajectories settings.
+1	13:56:14	File created	
+1	13:56:58	File closed	
+1	13:57:01	Realtime started	
+1	14:03:32	File created	
+1	14:04:51	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\squatTrial.qtm	
+1	14:20:11	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\squatTrial.qtm	
+1	14:22:31	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\squatTrial.qtm	
+1	14:22:57	File closed	
+1	14:22:58	File loaded from C:\Users\vizlab_stud\Documents\openPoseValidation\thowTrial.qtm	
+1	14:23:04	File closed	
+1	14:23:05	File loaded from C:\Users\vizlab_stud\Documents\openPoseValidation\squatTrial.qtm	
+1	14:23:09	File closed	
+1	14:23:10	File loaded from C:\Users\vizlab_stud\Documents\openPoseValidation\thowTrial.qtm	
+1	14:28:13	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\thowTrial.qtm	
+1	14:28:32	File closed	
+1	14:28:33	File loaded from C:\Users\vizlab_stud\Documents\openPoseValidation\WalkingTrial.qtm	
+1	14:33:55	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\WalkingTrial.qtm	
+1	14:37:59	File saved as C:\Users\vizlab_stud\Documents\openPoseValidation\WalkingTrial.qtm	

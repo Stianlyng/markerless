@@ -1,0 +1,329 @@
+<?xml version="1.0"?>
+<QTM_Label_List_Ver_1.00>
+    <Trajectories>
+        <Trajectory>
+            <Name>Q_HeadL</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_HeadR</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_HeadFront</Name>
+            <Color R="255" G="157" B="59"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_Chest</Name>
+            <Color R="255" G="157" B="59"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_SpineThoracic2</Name>
+            <Color R="255" G="157" B="59"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_SpineThoracic12</Name>
+            <Color R="255" G="157" B="59"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LShoulderTop</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LArm</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LElbowOut</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LElbowIn</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LWristIn</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LWristOut</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LHand2</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RShoulderTop</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RArm</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RElbowOut</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RElbowIn</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RWristIn</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RWristOut</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RHand2</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_WaistLFront</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_WaistL</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_WaistBack</Name>
+            <Color R="255" G="157" B="59"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_WaistR</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_WaistRFront</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LThighFrontLow</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LKneeOut</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LKneeIn</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LShinFrontHigh</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LAnkleOut</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LHeelBack</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LForefoot2</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_LForefoot5</Name>
+            <Color R="0" G="204" B="255"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RThighFrontLow</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RKneeOut</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RKneeIn</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RShinFrontHigh</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RAnkleOut</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RHeelBack</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RForefoot2</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+        <Trajectory>
+            <Name>Q_RForefoot5</Name>
+            <Color R="0" G="147" B="0"/>
+        </Trajectory>
+    </Trajectories>
+    <Bones>
+        <Color R="246" G="249" B="124"/>
+        <Thickness>10.000000</Thickness>
+        <Bone>
+            <Index Low="32" High="33"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="40" High="41"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="11" High="12"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="18" High="19"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="9" High="10"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="27" High="29"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="16" High="17"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="38" High="39"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="30" High="31"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="35" High="37"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="1" High="3"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="18" High="20"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="2" High="3"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="12" High="13"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="34" High="35"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="26" High="27"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="4" High="7"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="4" High="14"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="1" High="5"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="16" High="19"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="37" High="38"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="29" High="30"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="6" High="23"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="21" High="26"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="11" High="13"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="5" High="14"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="2" High="5"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="9" High="12"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="25" High="34"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="19" High="20"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="5" High="7"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="7" High="9"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="14" High="16"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="6" High="7"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="6" High="14"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="21" High="23"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="23" High="25"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="31" High="32"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+        <Bone>
+            <Index Low="39" High="40"/>
+            <Color R="246" G="249" B="124"/>
+        </Bone>
+    </Bones>
+</QTM_Label_List_Ver_1.00>
